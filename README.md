@@ -28,4 +28,33 @@ function App() {
   )
 }
 
-export default App```
+export default App
+```
+
+## DevTools
+### npm installation
+```
+npm i @tanstack/react-query-devtools
+```
+
+### Floatin Mode
+```
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+
+function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      {/* The rest of your application */}
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
+  )
+}
+```
+
+### Options
+- ```initiallsOpen: Boolean```
+  - Set this ```true``` if you want the dev tools to default to being open.
+- ```buttonPosition?: "top-left" | "top-right" | "bottom-left" | "bottom-right" | "relative"```
+  - Defaults to ```bottom-right```
+- ```position?: "top" | "bottom" | "left" | "right"```
+  - Defaults to ```"bottom"```
